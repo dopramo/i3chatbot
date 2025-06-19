@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Help Bot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/botui@0.3.9/build/botui.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/botui@0.3.9/build/botui-theme-default.css" />
+    <style>
+      :root {
+        --bmw-blue: #1c69d4;
+        --bmw-white: #ffffff;
+        --bmw-black: #222831;
+        --bmw-red: #e10600;
+      }
+
+      html, body {
+        background: linear-gradient(135deg, var(--bmw-blue) 0%, #0e2a47 100%);
+        min-height: 100vh;
+        margin: 0;
+        font-family: 'Segoe UI', Arial, sans-serif;
+      }
+
+      .bmw-logo-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        padding: 24px 0 8px 0;
+      }
+      .bmw-logo-header img {
+        height: 40px;
+        margin-right: 10px;
+      }
+      .bmw-logo-header span {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--bmw-white);
+        letter-spacing: 1px;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      }
+
+      .botui-app-container {
+        max-width: 380px;
+        margin: 0 auto 32px auto;
+        border-radius: 16px;
+        box-shadow: 0 4px 24px 0 rgba(44, 62, 80, 0.13);
+        background: var(--bmw-white);
+        border: none;
+        overflow: hidden;
+      }
+
+      .botui-messages-container {
+        padding: 20px 14px 10px 14px;
+        background: var(--bmw-white);
+      }
+
+      .botui-message-content.text {
+        background: var(--bmw-blue);
+        color: var(--bmw-white);
+        border-radius: 10px 10px 10px 0;
+        font-weight: 500;
+        border: none;
+      }
+
+      .botui-message-content.human {
+        background: #222831;
+        color: var(--bmw-white);
+        border-radius: 10px 10px 0 10px;
+        border: none;
+      }
+
+      .botui-actions-container {
+        padding: 0 14px 14px 14px;
+        background: var(--bmw-white);
+      }
+
+      button.botui-actions-buttons-button {
+        background: var(--bmw-blue);
+        color: var(--bmw-white);
+        border: none;
+        border-radius: 7px;
+        margin: 5px 5px 0 0;
+        padding: 9px 18px;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: background 0.2s;
+        cursor: pointer;
+      }
+      button.botui-actions-buttons-button:hover {
+        background: #0e2a47;
+      }
+      button.botui-actions-buttons-button[value="end"],
+      button.botui-actions-buttons-button[value="restart"] {
+        background: var(--bmw-red);
+      }
+      button.botui-actions-buttons-button[value="end"]:hover,
+      button.botui-actions-buttons-button[value="restart"]:hover {
+        background: var(--bmw-blue);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bmw-logo-header">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg" alt="BMW Logo">
+      <span>AUTO BAVARIA - BMW DRIVING EXCELLENCE</span>
+    </div>
+    <div class="botui-app-container" id="help-bot">
+      <bot-ui></bot-ui>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/botui@0.3.9/build/botui.min.js"></script>
+    <script src="./bot-script.js"></script>
+  </body>
+</html>
