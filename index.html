@@ -43,7 +43,7 @@
       .botui-app-container {
         max-width: 380px;
         margin: 0 auto 32px auto;
-        border-radius: 16px;
+        border-radius: 20px;
         box-shadow: 0 4px 24px 0 rgba(44, 62, 80, 0.13);
         background: var(--bmw-white);
         border: none;
@@ -58,7 +58,7 @@
       .botui-message-content.text {
         background: var(--bmw-blue);
         color: var(--bmw-white);
-        border-radius: 10px 10px 10px 0;
+        border-radius: 15px 15px 15px 0;
         font-weight: 500;
         border: none;
       }
@@ -66,12 +66,12 @@
       .botui-message-content.human {
         background: #222831;
         color: var(--bmw-white);
-        border-radius: 10px 10px 0 10px;
+        border-radius: 15px 15px 0 15px;
         border: none;
       }
 
       .botui-actions-container {
-        padding: 0 14px 14px 14px;
+        padding: 0 15px 15px 15px;
         background: var(--bmw-white);
       }
 
@@ -97,6 +97,19 @@
       button.botui-actions-buttons-button[value="end"]:hover,
       button.botui-actions-buttons-button[value="restart"]:hover {
         background: var(--bmw-blue);
+      }
+      button.botui-actions-buttons-button[value="back"] {
+        display: block;
+        width: 100%;
+        margin: 18px 0 0 0 !important; /* Extra space above */
+        background: #f4f4f4;
+        color: var(--bmw-black);
+        border: 1px solid #e0e0e0;
+        order: 99; /* Ensure it's always last if flex is used */
+      }
+      button.botui-actions-buttons-button[value="back"]:hover {
+        background: #e0e0e0;
+        color: var(--bmw-black);
       }
     </style>
   </head>
